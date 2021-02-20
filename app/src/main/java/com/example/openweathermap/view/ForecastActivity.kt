@@ -25,7 +25,7 @@ class ForecastActivity : AppCompatActivity() {
         title = forecast.city.name
         binding.forecastList.adapter = ForecastAdapter(forecast) {
             val i = Intent(this, ForecastDetailActivity::class.java).apply {
-                putExtra(ForecastDetailActivity.KEY_FORECAST_ITEM, forecast)
+                putExtra(ForecastDetailActivity.KEY_FORECAST_ITEM, it)
                 putExtra(ForecastDetailActivity.KEY_CITY, forecast.city)
             }
             startActivity(i)

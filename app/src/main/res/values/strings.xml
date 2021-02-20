@@ -4,4 +4,6 @@
     <string name="lookup">Lookup</string>
     <string name="lookup_error">Could not find that city. Please indicate State and/or Country codes.</string>
     <string name="temp">Temp: %1$.0f°F</string>
+    <string name="temperature">%1$.0f°F</string>
+    <string name="feels_like">Feels like: %1$.0f°F</string>
 </resources>
