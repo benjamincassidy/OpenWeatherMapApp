@@ -2,6 +2,7 @@ package com.example.openweathermap.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.openweathermap.adapters.ForecastAdapter
@@ -14,6 +15,9 @@ class ForecastActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
         binding = ActivityForecastBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.forecastList.layoutManager = LinearLayoutManager(this)
@@ -25,6 +29,16 @@ class ForecastActivity : AppCompatActivity() {
                 putExtra(ForecastDetailActivity.KEY_CITY, forecast.city)
             }
             startActivity(i)
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 
