@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 private val today = LocalDateTime.now().dayOfYear
-private val tomorrow = today + 1
+private val tomorrow = LocalDateTime.now().plusDays(1).dayOfYear
 
 class DateTimeViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
