@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="January 6\n12:00PM"/>
 
