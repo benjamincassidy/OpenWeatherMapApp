@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OpenWeatherMap</string>
+    <string name="city_name">City Name</string>
+    <string name="lookup">Lookup</string>
+    <string name="lookup_error">Could not find that city. Please indicate State and/or Country codes.</string>
+    <string name="temp">Temp: %1$.0f°F</string>
+</resources>
