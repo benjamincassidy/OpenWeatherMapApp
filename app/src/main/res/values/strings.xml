@@ -6,4 +6,6 @@
     <string name="temp">Temp: %1$.0f°F</string>
     <string name="temperature">%1$.0f°F</string>
     <string name="feels_like">Feels like: %1$.0f°F</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
 </resources>

@@ -30,7 +30,7 @@ class ForecastDetailActivity : AppCompatActivity() {
         binding.temperature.text = getString(R.string.temperature, forecast.main.temp)
         binding.feelsLike.text = getString(R.string.feels_like, forecast.main.feelsLike)
         val forecastDate = LocalDateTime.ofEpochSecond(forecast.dt, 0, OffsetDateTime.now().offset)
-        val formatter = DateTimeFormatter.ofPattern("MMMM d\nh:mma")
+        val formatter = DateTimeFormatter.ofPattern("EEEE\nMMMM d\nh:mma")
         binding.dateTime.text = forecastDate.format(formatter)
         if (forecast.weather.isNotEmpty()) {
             binding.condition.text = forecast.weather[0].main
