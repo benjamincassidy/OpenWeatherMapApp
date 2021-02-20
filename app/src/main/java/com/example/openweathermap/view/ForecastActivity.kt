@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.openweathermap.adapters.ForecastAdapter
 import com.example.openweathermap.data.Forecast
@@ -21,6 +22,12 @@ class ForecastActivity : AppCompatActivity() {
         binding = ActivityForecastBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.forecastList.layoutManager = LinearLayoutManager(this)
+        binding.forecastList.addItemDecoration(
+            DividerItemDecoration(
+                binding.forecastList.context,
+                DividerItemDecoration.VERTICAL
+            )
+        );
         val forecast = intent.getParcelableExtra<Forecast>(KEY_FORECAST)
         title = forecast.city.name
         binding.forecastList.adapter = ForecastAdapter(forecast) {
